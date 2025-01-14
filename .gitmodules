@@ -4,3 +4,6 @@
 [submodule "themes/congo"]
 	path = themes/congo
 	url = https://github.com/jpanther/congo.git
+[submodule "themes/congo"]
+	path = themes/hyde
+	url = https://github.com/spf13/hyde.git	
