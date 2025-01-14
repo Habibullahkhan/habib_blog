@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-02-17T14:30:02+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <lastmod>2024-02-17T14:30:02+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-02-17T14:30:02+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/api-design-technology-comparison/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/chatbot/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/comparing_databases/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/history_of_hmi/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/hackathon/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/pyside6_learning/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/qtgraphs_vs_qtcharts/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>

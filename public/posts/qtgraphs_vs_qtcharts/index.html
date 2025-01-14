@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Qt Charts and Qt Graphs | Habib blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Introduction Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.
+Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.">
+    <meta name="generator" content="Hugo 0.126.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/qtgraphs_vs_qtcharts/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/qtgraphs_vs_qtcharts/">
+  <meta property="og:site_name" content="Habib blog">
+  <meta property="og:title" content="Qt Charts and Qt Graphs">
+  <meta property="og:description" content="Introduction Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.
+Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta itemprop="name" content="Qt Charts and Qt Graphs">
+  <meta itemprop="description" content="Introduction Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.
+Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.">
+  <meta itemprop="wordCount" content="569">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Qt Charts and Qt Graphs">
+  <meta name="twitter:description" content="Introduction Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.
+Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Habib blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Qt Charts and Qt Graphs</h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
+<p>Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.</p>
+<p>Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.2 replacing its predecessor QCanvas.Graphic view provides an item-based approach to model-view programming.</p>
+<h2 id="the-graphic-view-architecture">The Graphic View Architecture</h2>
+<p>Graphic view provide an item-based approach to model-view programming. Several views can observe a single scene, and the scene contains items of varying geometric shapes.# The Scene
+QGraphicScene provides a fast interface for managing a large number of items. It enable event propagations to the items, managing item state, such as selection and focus handling and provide untransformed rendering functionality.</p>
+<p>The scene serve as a container for QGraphicItem objects. QGraphicScene allows to render part of the scene into a paint device through the QGraphicScene::render() function.</p>
+<h1 id="the-view">The View</h1>
+<p>QGraphicView provides the view widget, that visualizes the content of the scene. You can attach several views to the same scene, to provide several view ports into the same data set. The view receive view events from the keyboard and mouse, and translate these scene events before sending the events to the visualized scene. Using the transformation matrix, QGraphicsView::transform(), the view can transform the scene coordinate system. This allow advanced navigation features such as zomming and rotation.</p>
+<h1 id="the-item">The Item</h1>
+<p>QGraphicItem is the base class for graphical items in a base.</p>
+<h2 id="paint-system">Paint System</h2>
+<p>Qt&rsquo;s paint system enables painting on screen and print devices using the same API&rsquo;s, and is primarily based on the QPainter, QPaintDevice and QPaintEngine.</p>
+<h2 id="qt-graphs">Qt Graphs</h2>
+<h2 id="qt-quick-scene-graph">Qt Quick Scene Graph</h2>
+<p>Qt Quick 2 makes use of a dedicated scene graph that is then traversed and rendered via a graphic API such as OpenGL ES, OpenGL, Vulkan, Metal, or Direct 3D. Using a scene graph for rendering compared to traditional imperative painting systems (QPainter and similar), means the scene to be rendered can be retained between frames and the complete set of primitives to render is known before rendering starts. The Scene Graph is closely tied to Qt Quick 2.0 and cannot be used standalone. The scene graph is managed and rendered by the QQuickWindow class.</p>
+<h2 id="graphicshttpsdocqtioqt-6topics-graphicshtml"><a href="https://doc.qt.io/qt-6/topics-graphics.html">Graphics</a></h2>
+<p>QtQuick uses scene graph for rendering as describe above. QtQuick3D is an add-on that provide high level API for creating 3D content and 3D user interfaces based on Qt Quick. It extends the Qt scene graph  which lets you implement the 3D content on 2D Qt Quick applications.</p>
+<h1 id="high-level-graphics-with-qt-gui">High Level Graphics with Qt GuI</h1>
+<p>Qt GUI provides a high level windowing, painting, and typography system. QPainter provides an API for drawing vector graphics, text and images onto different surfaces, or QPainDevice instances such as QImage, QOpenGLPaintDevice, QWidget, and QPainter.</p>
+<h1 id="low-level-graphics-with-qt-gui">Low Level Graphics with Qt GUI</h1>
+<p>Qt GUI provides cross-platform enablers for managing OpenGL contexts and Vulkan instances. Applicaiton that perform rendering directly with OpenGL, OpenGL ES, or Vulkan can use different Qt objects.
+Qt GuI also offers Qt Rendering Hardware Interface (QRhi) family of API, such as QRHI and QShader, for application that want to perform rendering using the portable, cross-platform 3D rendering infrastructure Qt itself uses to implement the Qt Quick scene graph and Qt Quick 3D rendering engine.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Habib blog 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

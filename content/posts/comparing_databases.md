@@ -1,0 +1,92 @@
++++
+title = "Comparing Databases"
+draft = true
++++
+
+## Introduction
+
+A database is an organized collection of data or a type of data store based on the use of data base management sytem (DBMS), the software that interacts with end users, applications, and database itself to capture and analyze the data. 
+
+Small database can be stored on a file system, while large database are hosted on computer cluster or cloud storage. The design of databases spans formal techniques and practical considerations, including data modelling, efficient data representation and storage, query languages, security and privacy of sensitive data, and distributed computing issues, including supporting concurrent access and fault tolerance. 
+
+Computer scientist may classify database management system according to the database models that they support, relational databases became dominent in 1980s. These model data as rows and columns in a series of tables, and the waste majority use SQL for writing and querying data. In the 2000s, non-relationsal databases became popular, collectively referred to as NoSql, because they use different query languages.
+
+One of my customer is developing an application for a data-intensive automated machine. The machine uses thin film technology to deposit thin film to make semiconductor wapors. There are three kind of data. The sensor data coming from the equipment. The configuration database and the recipie database. There are 100 upto 200 entries per second. There are different data sources. 
+
+## Database Types
+There are different criteria to decide for a database.
+(1) How fast we want to fetch data from database. Applications that want to show very quick response to the user. Or application that are mission critical and need fast data retrieval. The best option for such use case are database that remain in the memory. One example of such database is Radis. The disadvantage is that the limit on the RAM memory. Therefore huge databases do not fit into RAM. 
+(2) Relationship between data points. A data that is structured such as bank data. When we select a user. A user has one or multiple accounts. A user has transactions. And so on. The best database for such a use case are relational databases such as SQL. These are very old databases and occupy almost 72 percent of the market. They ensure data consistency and data integrity. They are very intuitive for programmer as data is designed into tables. But they could be slow as the databases has to maintain the relationships and then joins are build based on those relationships. They are not ideal to scale. But there are techniques that scale them.
+(3) Other datatbase types include Document databases, non-relational databases such as Mongodb and Graph databases. 
+
+## History of Relatonal Database
+The concept of database was made possible by direct access storage media such as magnetic disks, which became widely available in 1960's. Earlier systems relied on sequential storage of data on magnetic tape. The subsequent development of database technology can be divided into three eras based on datamodel or structure: navigational, SQL/relational, and post-reltaional. 
+
+The two main early navigational data model were the hierarical model and the CODASYL modle (network model). These were characterized by the use of pointers (often physical disk addresses) to follow relationships from one record to another.
+
+The relational model, first proposed in 1970 by Edger F. Codd, departed from this tradition by insisting that application should search for data b content, rather than following links. Edger F.Codd was not happy with navigational model of the CODASYL approach, notabley the lack of a search facility. Instead of record being stored in some sort of linked listof free form recordsas in CODASYL, Codd ideas was to organize the data as a number of tables, each table being used for a different type of entity. Each table would contain a fixed number of columns containing the attributes of the entity. One or more columns of the table were designed as primary key by which the rows of the table could be easily identified, cross-references between these tables always used these primary keys, rather than disk addresses, and queries would join tables based on these relationship, using a set of operators based on the mathematical system of relational calulus (from which the model takes its name). Splitting the data into a set of normalized tables (or relations) aimed to ensure that each fact  was stored only once. thus simplifying upate operations. Virtual tables called views could present the data in different ways for different users, but views could not be directly updated. 
+Only in the mid 1980's did computing hardware became power enough to allow the wide deployment of relational systems. IBM Db2, Oracle, MySQL, and Microsoft SQL Server are the most searched DBMS. The next generation of post-relational databases in the late 2000s became known as NoSql databases, introducing fast key-value stores and document oriented databases. 
+
+## Database requirement
+# Data Volume and velocity: 
+Estimate the total amount of data to be stored (daily, weekly and monthly). 
+Data growth rate: How quickly does this data accumulate over time?
+Peak ingestion rate: Can you quantify the maximum number of data points per second during burst?
+# Data types and structure
+# Querying and Access patterns
+Live graphs: How frequently does the data need to be refreshed (real time vs nearly real time).
+Historical graphs: What time ranges are typically analyzed (hours, days or months). Historical data is provided with 1 year of data. The data is available as .csv, .html, and .json.
+# Reliability and availability
+Downtime tolerance: How critical for the system to be always onine?
+Data integrity: Are there mechanisms needed to ensure data consistency and data accuracy?
+# Scalability
+Growing data volume: How does the database need to handle increasing data in the future.
+More data sources: Will you potentially add more data sources or machines?
+# Operational Considerations: 
+Deployment Environment: On-premise, cloud-based or hybrid?
+
+## Recommendation
+# Time-Series Databases
+These remain strong contendors for sensor data. Think about their ability to handle your alarm/warning data. 
+Examples: InfluxDB or TimescaleDB
+
+# Hybrid approach
+A Time-Series database for sensor data and relational database for configuration, recipe files and some unstructured alarm or warning data. Example is PostgreSQL.
+
+## Customer Document Requirement
+Load the configuration online from the PLC or from a selected database
+Report are called Databook's for external analysis of the equipment behavior.
+The databook contains log files, configuration files and database for investigation purposes. GUI must have one feature, it must be possible to import a databook 
+
+## Important Requirement Questions
+# Volume
+How much data are you generating?
+How rapidly is this data going to grow?
+# Velocity
+How many data points do you need to ingest per second/minute? Are there peak bursts of data?
+# Variety
+What data types do you need to store (structured numbers, text, images, sensor data, files)
+Is the structure of your data well-defined or flexible?
+# Querying and Access Patterns
+# Real time vs. Historical
+How often do you need to access the most recent data?
+How much historical data do you need to query, and over what time frames?
+# Query Complexity
+Are your queries simple lookups or do they involve complex aggregations, joins and filtering.
+# Read/Write Ration
+Is your application ready-heavy (data retrieval) or write heavy (frequent updates)?
+## Performance and Scalability
+What is the maximum acceptable delay for data retrieval or updates?
+Concurency: How many users or systems will be accessing the database concurrently.
+Future Growth: How do you anticipate your data volume and usage to change over time?
+## Reliability and consistency
+Downtime tolerance
+Data integrtiy: Do you have strict requirement for transaction consistency (ACID)?
+Disaster Recovery: What are the backup and recovery needs?
+## Operational Factors
+Will the database be on premises, cloud or hybrid?
+## Free Writing
+File-cabinets: Traditional paper-based records were inflexible. Finding specific information was time consuming and updating was messy. 
+Flat files: Early computers used flat-files like giant spreadsheets but they led to data redundancy (repeated info), difficulty in connected related information. Hierarchial Model: One of the earliest model developed by IBM (IMS). Data was structured like a tree with parent-child relationships. This was an improvemetn but navigation was difficult. Network Model: Developed by CODASYL, it allowed more complex relationship between data entities. Still, navigating the network of data could be complex for deveopers. In 1970, Edger F.Codd, a researcher at IBM published a landmark paper title "A Relational Model for Data of Large shared data banks". He proposed a way to organize data in tables (relations) and use a standardaized language (later sql) to query them. 
+Along with Edger Codd, Charles Bachman designed one of the earliest database system, the Integrated Data Store (IDS), which influenced the network model. Micheal Stonebreaker is the archtect of several influential databases such as Ingres and PostgreSQL. Charles Bachman is the Pioneer of Network databases. He worked at General Electric and later at Honeywell. The problem he faced was to efficiently manage complex manufacturing data and relationships. Edgar F.Codd is considered the father of Relational Databases. He worked at IBM research lab in San Jose california. The problem was the limitation of hierarchical and network database models - their rigidity and navigational complexity - made it difficult to efficiently access and manipulate data in a flexible manner. Michael Stonebraker is the innovater in relational and object-oriented databases. He solved the problems of cost and limitation of commercial databases, the need for better performance, and hanlding new data types. Stonebraker is a legend in the database world. His contribution democratized databases and significantly advanced database technology. 
+Amazon DynamoDB developed internally at Amazon to handle extreme scalability, inspired the eventual "dynamo-style" key-value stores. MongoDB is a popular document-oriented database valuing developer experience and flexibility. 
