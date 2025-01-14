@@ -6,63 +6,14 @@
     <description>Recent content in Posts on Habib blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Feb 2024 14:30:02 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>my First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sat, 17 Feb 2024 14:30:02 +0100</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text&#xA;Visit the Hugo website!</description>
-    </item>
     <item>
       <title></title>
       <link>http://localhost:1313/posts/api-design-technology-comparison/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/api-design-technology-comparison/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>chatbot</title>
-      <link>http://localhost:1313/posts/chatbot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/chatbot/</guid>
-      <description>Introduction In this project I will develop a chatbot that can be trained on data. The project include a backend server and a frondend client.&#xA;How to use OpenAI API Following is a very easy tutorial to start with open ai api. OpenAi API reference tutorial&#xA;Initial Code generation through chatgpt Following is the link to the thread that generated the chatgpt code for me Chatbot in chatgpt&#xA;Project Structure The project contains three folder (1) backend (2) frontend and (3) data.</description>
-    </item>
-    <item>
-      <title>Comparing Databases</title>
-      <link>http://localhost:1313/posts/comparing_databases/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/comparing_databases/</guid>
-      <description>Introduction A database is an organized collection of data or a type of data store based on the use of data base management sytem (DBMS), the software that interacts with end users, applications, and database itself to capture and analyze the data.&#xA;Small database can be stored on a file system, while large database are hosted on computer cluster or cloud storage. The design of databases spans formal techniques and practical considerations, including data modelling, efficient data representation and storage, query languages, security and privacy of sensitive data, and distributed computing issues, including supporting concurrent access and fault tolerance.</description>
-    </item>
-    <item>
-      <title>History of HMI</title>
-      <link>http://localhost:1313/posts/history_of_hmi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/history_of_hmi/</guid>
-      <description>Introduction History Predecessors of the HMI include the Batch Interface (1945 - 1968), Command line interface (1969 - present), and the graphical user interface (1981 - present).&#xA;The concept of command line interface originated when typewriter machines were connected to computers in 1950, and offered results on demand. The batch interface was deliver result on demand. A basic example of command line would be windows Disk Operating System &amp;ldquo;DOS&amp;rdquo; which dominated the 1980&amp;rsquo;s.</description>
-    </item>
-    <item>
-      <title>Home Demo integration in qt application manager</title>
-      <link>http://localhost:1313/posts/hackathon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hackathon/</guid>
-      <description>Introduction The purpose of the demo was to integrate Qt SmartHome demo into qt application manager. It will enable us to run the different applications in the SmartHome demo on the same system in multiple processes. The application manager incorporates qt wayland compositor to support mulitp ui processes, application launcher to manage application life cycle, Qt virtual keyboard to enter text and a notification manager. The second part of the hackathon invovled adding enagaging visual effects to launching and stopping an application.</description>
-    </item>
-    <item>
-      <title>Learning Pyside6</title>
-      <link>http://localhost:1313/posts/pyside6_learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/pyside6_learning/</guid>
-      <description>Introduction Qt is an application development and UI framework. Ui is developed using Qt widgets or QML. Qt Widgets is used for desktop application development whereas QML is used for mobile apps, embedded apps and so on. Qt framework is written in c++. Therefore the backend is traditionally written in Qt c++. The Qt C++ adds some additional capabilities to the standard c++. These capabilities include adding introspection to c++ through storing information to every QObject derived class (using Q_ObJECT macro).</description>
-    </item>
-    <item>
-      <title>Qt Charts and Qt Graphs</title>
-      <link>http://localhost:1313/posts/qtgraphs_vs_qtcharts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/qtgraphs_vs_qtcharts/</guid>
-      <description>Introduction Visualizing data in the form of charts is essential to many applications. Some of applications are very data intensive such as medical or automative. Medical applications are very critical and it is very important to visualize real time data.&#xA;Qt provide different apis for drawing different kind of charts. One such API for QML is called Qt Charts. Qt Charts uses the Graphic View Framework for ease of integration. Qt Graphic View was introduced in Qt 4.</description>
     </item>
   </channel>
 </rss>
